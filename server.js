@@ -28,12 +28,12 @@ app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Make public a static folder
+
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/unit18Populater";
+var PORT = process.env.PORT || 3000; 
 //connnect to Mongo DB
 mongoose.connect(MONGODB_URI);
 
