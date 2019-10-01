@@ -15,6 +15,9 @@ var PORT = process.env.PORT  || 8080;
 
 // Initialize Express
 var app = express();
+app.use(express.static("public"));
+
+
 
 // Configure middleware
 app.use(logger("dev"));
@@ -33,6 +36,14 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/27017", { useNewUrlParser: true });
+
+// ROUTER
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+// ================================================================================
+
+// require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // Start the server
 app.listen(PORT, function() {
