@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 
 // Save a reference to the Schema constructor
+var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
     // `title` is required and of type String

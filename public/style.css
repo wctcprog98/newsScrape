@@ -1,4 +1,4 @@
-    body { background-color: yellow;  }
+    body { background-color: blue;  }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -31,4 +31,8 @@
       }
     h1 {
       text-align: center; 
+    }
+
+    p{
+      text-align: center;
     }
